@@ -1,6 +1,6 @@
 name: qoi_dart
 description: A QOI Image Encoder / Decoder
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/grontol/qoi_dart
 
 environment:
