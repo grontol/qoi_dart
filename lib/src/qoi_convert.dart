@@ -89,7 +89,7 @@ Uint8List qoiEncode(Uint8List bytes, int width, int height, PixelFormat pixelFor
   writeByte(0);
   writeByte(linearColorSpace ? 1 : 0);
 
-  final pixelIndex = Int64List.fromList(List.filled(64, 0));
+  final pixelIndex = Uint32List.fromList(List.filled(64, 0));
 
   int prevPixel = 0x000000FF;
 
@@ -240,7 +240,7 @@ QoiFile qoiDecode(Uint8List bytes, PixelFormat pixelFormat) {
   final outBytes = Uint8List(width * height * outChannels);
   int writeIndex = 0;
 
-  final pixelIndex = Int64List.fromList(List.filled(64, 0));
+  final pixelIndex = Uint32List.fromList(List.filled(64, 0));
   int prevPixelR = 0;
   int prevPixelG = 0;
   int prevPixelB = 0;
